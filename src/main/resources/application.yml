@@ -1,0 +1,17 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: payment-server
+  data:
+    mongodb:
+      uri: mongodb://admin:password@localhost:27017/restaurant_db?authSource=admin
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+    org.mongodb.driver.protocol.command: DEBUG
